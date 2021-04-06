@@ -14,19 +14,22 @@
  *
  * The result should be 9
  */
-function getMatrixElementsSum(matr) {
-  let sum = 0
-  matr.map((line, i) => {
+function getMatrixElementsSum(matrix) {
+  let sum = 0;
+  const tempMatrix = matrix;
+  tempMatrix.map((line, i) => {
     line.map((numb, j) => {
-      if(numb === 0){
-        if(i < matr.length - 1){
-          matr[i + 1][j] = 0
+      if (numb === 0) {
+        if (i < tempMatrix.length - 1) {
+          tempMatrix[i + 1][j] = 0;
         }
       }
-      sum += numb
-    })
-  })
-  return sum
+      sum += numb;
+      return numb;
+    });
+    return line;
+  });
+  return sum;
 }
 
 module.exports = getMatrixElementsSum;
