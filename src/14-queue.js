@@ -12,17 +12,20 @@
  */
 
 class Queue {
-  get size() {
-    throw new Error('Not implemented');
+    constructor(){
+        this.queue = []
+    }
+    get size() {
+      return this.queue.length
+    }
+  
+    enqueue(elem) {
+      this.queue.push(elem)
+    }
+  
+    dequeue() {
+      return this.queue.shift()
+    }
   }
-
-  enqueue(/* element */) {
-    throw new Error('Not implemented');
-  }
-
-  dequeue() {
-    throw new Error('Not implemented');
-  }
-}
 
 module.exports = Queue;
