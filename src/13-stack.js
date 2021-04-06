@@ -11,17 +11,21 @@
  *
  */
 class Stack {
-  push(/* element */) {
-    throw new Error('Not implemented');
+    constructor(){
+        this.stack = []
+    }
+    push(elem) {
+      this.stack.push(elem)
+      return 1 
+    }
+  
+    pop() {
+      return this.stack.pop()
+    }
+  
+    peek() {
+      return this.stack[0]
+    }
   }
-
-  pop() {
-    throw new Error('Not implemented');
-  }
-
-  peek() {
-    throw new Error('Not implemented');
-  }
-}
 
 module.exports = Stack;
