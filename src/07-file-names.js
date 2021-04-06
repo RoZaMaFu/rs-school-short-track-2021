@@ -1,15 +1,15 @@
-function renameFiles(fileArr) {
-    for(let i = 0; i < fileArr.length; i++){
-        let counter = 0
-        for(let j = i+1; j < fileArr.length; j++){
-            if(fileArr[i] === fileArr[j]){
-                counter++
-                fileArr[j] = `${fileArr[i]}(${counter})`
-            }
-        }
+function renameFiles(names) {
+  const tempNames = names;
+  for (let i = 0; i < tempNames.length; i++) {
+    let counter = 0;
+    for (let j = i + 1; j < tempNames.length; j++) {
+      if (tempNames[i] === tempNames[j]) {
+        counter++;
+        tempNames[j] = `${tempNames[i]}(${counter})`;
+      }
     }
-    return fileArr
+  }
+  return tempNames;
 }
-
 
 module.exports = renameFiles;
