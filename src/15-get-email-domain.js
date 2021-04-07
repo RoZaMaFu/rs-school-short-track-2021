@@ -3,4 +3,3 @@ function getEmailDomain(email) {
 }
 
 module.exports = getEmailDomain;
-
