@@ -3,7 +3,7 @@ function encodeLine(str) {
   const resultArr = [];
   for (let i = 0; i < strArr.length; i++) {
     let counter = 1;
-    for (let j = i + 1; j < strArr.length; j++) {
+    for (let j = i + 1; strArr[j] === strArr[i]; j++) {
       if (strArr[i] === strArr[j] && strArr[j]) {
         counter++;
         strArr[j] = null;
