@@ -22,4 +22,3 @@ function getDNSStats(domains) {
 }
 
 module.exports = getDNSStats;
-
