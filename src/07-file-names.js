@@ -13,4 +13,3 @@ function renameFiles(names) {
 }
 
 module.exports = renameFiles;
-
