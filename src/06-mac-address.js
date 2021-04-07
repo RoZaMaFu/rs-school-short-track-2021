@@ -2,7 +2,7 @@ function isMAC48Address(mac) {
   if (mac.split('-').join('').length !== 12) {
     return false;
   }
-  const regex = /[^A-Z0-9]/g;
+  const regex = /[^A-F0-9]/g;
   return !regex.test(mac.split('-').join(''));
 }
 
