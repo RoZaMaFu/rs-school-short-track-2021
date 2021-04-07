@@ -28,3 +28,4 @@ function minesweeper(matr) {
   return resultMatr.map((line) => line.filter((field) => field !== '-1' && !Number.isNaN(field)));
 }
 module.exports = minesweeper;
+
