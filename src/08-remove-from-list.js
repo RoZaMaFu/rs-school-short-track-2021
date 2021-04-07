@@ -1,11 +1,25 @@
+const ListNode = require('../extensions/list-node');
+
 function removeKFromList(l, k) {
-  l.map((int, i) => {
-    if (int === k) {
-      l.splice(i, 1);
+  let currentList = l;
+  let currentValue = currentList.value;
+  const result = [];
+  while (currentList) {
+    result.push(currentValue);
+    currentList = currentList.next;
+    if (currentList) {
+      currentValue = currentList.value;
     }
-    return int;
-  });
-  return l;
+  }
+  return result.filter((digit) => digit !== k).reverse().reduce((acc, cur) => {
+    if (acc) {
+      const node = new ListNode(cur);
+      node.next = acc;
+      return node;
+    }
+
+    return new ListNode(cur);
+  }, null);
 }
 
 module.exports = removeKFromList;
